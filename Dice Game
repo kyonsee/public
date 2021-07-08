@@ -7,22 +7,21 @@ int GetRandom(int min,int max);
 int main(){
     int a;
     int b;
+    char name;
     
     srand((unsigned int)time(NULL));
     
     a=GetRandom(1,6);
     b=GetRandom(1,6);
     
+    printf("What is your name?\n");
+    scanf("%s",name);
+    printf("Hello, %s!\n,name");
     
     printf("Rolling the dice...\n:");
     printf("Die 1: %d\n",a);
     printf("Die 2: %d\n",b);
     printf("Total value: %d\n",a+b);
-    
-    if (a+b > 7 )
-    printf("You won\n");
-    if (a+b < 8 )
-    printf("You lost\n");
     return 0;
 }
 
