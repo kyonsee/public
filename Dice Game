@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <time.h>
+
+int GetRandom(int min,int max);
+
+int main(){
+    int a;
+    int b;
+    
+    srand((unsigned int)time(NULL));
+    
+    a=GetRandom(1,6);
+    b=GetRandom(1,6);
+    
+    printf("Rolling the dice...\n:");
+    printf("Die 1: %d\n",a);
+    printf("Die 2: %d\n",b);
+    printf("Total value: %d",a+b);
+    return 0;
+}
+
+int GetRandom(int min,int max)
+{
+	return min + (int)(rand()*(max-min+1.0)/(1.0+RAND_MAX));
+}
+
+
